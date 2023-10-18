@@ -1,0 +1,24 @@
+print ('Olá bem vindo á loja do Willian Sureck Machado')
+
+produto = float(input('Qual o valor unitário do produto?')) #utilizado float pois o valor  pode ser decimal
+quantidade = float(input('Qual a quantidade de produto adquirida?'))
+desconto = 0 #desconto inicial com valor 0
+
+if quantidade <= 9:
+ desconto = 0
+
+elif 10<= quantidade <99:
+ desconto = 0.05 #desconto 5%
+
+elif 100<= quantidade <999:
+ desconto = 0.10 #desconto 10%
+
+else:
+ desconto = 0.15 #desconto 15%
+
+total_sem_desconto = produto * quantidade #calculo do produto sem desconto
+
+print ('O valor total sem desconto é: {:.2f}' .format(total_sem_desconto))
+
+total_com_desconto = total_sem_desconto - total_sem_desconto * desconto #calculo do desconto aplicado
+print ('O valor com desconto é {:.2f}' .format(total_com_desconto))
